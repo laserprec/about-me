@@ -52,7 +52,7 @@
 					<div class="media flex-column flex-md-row align-items-center">
 						<img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="assets/images/resume-profile.png" alt="image">
 						<div class="media-body text-left">
-							<p class="mb-0"> I am a self-driven Machine Learning Engineer with strong background in NLP, Computer Vision and MLOps. I love to solve challenging problems with deep learning, like building a self-driving (toy) car. I am experienced in object-oriented programming, data-pipeline building and model training and deployment. I believe that machine learning is the key to build a smarter world in a responsible way. On the side, I am an amateur photographer specialize in portrait, studio and street photography. </p>
+							<p class="mb-0"> As a Machine Learning Engineer, I've tackled diverse challenges in Natural Language Processing (NLP), Computer Vision, Reinforcement Learning (RL) and MLOps. My experience spans from deep learning applications, like developing a self-driving (toy) car, to object-oriented programming and data pipeline development. I'm passionate about the potential of machine learning to responsibly shape a smarter world. Outside of work, I enjoy amateur photography, specializing in portraits and street scenes. </p>
 						</div><!--//media-body-->
 					</div>
 				</div><!--//resume-intro-->
@@ -64,15 +64,30 @@
 								<h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Machine Learning Engineer</h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Akasa | February 2023 - Present</div>
+										
+									</div>
+									<div class="item-content">
+										<p> Optimizing processes and building robust data pipelines</p>
+										<ul class="resume-list">
+											<li>Optimized the inference time of our in-house OCR model, achieving a 40% improvement.</li>
+											<li>Built model evaluation pipeline to monitor model drifts in production</li>
+											<li>Constructed a data pipeline to aggregate OCR datasets, combining soft labeling on existing models with high-quality human labeling.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Software Engineer II</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"> Xbox | July 2021 - Present</div>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"> Xbox | July 2021 - October 2022</div>
 									</div>
 									<div class="item-content">
 										<p>Building AI solutions for game development</p>
 										<ul class="resume-list">
-											<li>Redesigned MLOps pipeline for <a href="https://github.com/microsoft/recommenders">Microsoft Recommenders</a> that cut runtime by 30% and cost by 20% </li>
-											<li>Prototyped and built infrastructures for scaled RL training with games in the cloud.</li>
-											<li>Built game features and integrated them into a 1st party game via an Unreal Engine Plugin.</li>
+											<li>Revamped the MLOps pipeline for <a href="https://github.com/microsoft/recommenders">Microsoft Recommenders</a> decreasing runtime by 30% and cost by 20%.</li>
+											<li>Prototyped and built cloud infrastructures for scaled training of AI agents to navigate production game maps.</li>
+											<li>Built and extend communication framework between RL agents and game engine over gRPC, allowing a RL agent to interact with any production game build on Unreal Engine.</li>
 										</ul>
 									</div>
 								</div><!--//item-->
@@ -85,14 +100,15 @@
 									<div class="item-content">
 										<p>As a ML engineer in the <a href="https://www.microsoftnewengland.com/maidap/">Microsoft AI Development Acceleration Program (MAIDAP)</a> , I have valuable experience building AI solutions for different product domains, such as News, Cognitive Service and Data Analytics. </p>
 										<ul class="resume-list">
-											<li>Created an open-sourced tool,<a href="https://microsoft.github.io/genalog/"> genalog,</a> to generate synthetic documents that improved Named Entity Recognition (NER) model performance by <b>76%</b> on scanned documents. </li>
+											<li>Developed an open-sourced tool,<a href="https://microsoft.github.io/genalog/"> genalog,</a> to generate synthetic documents that improved Named Entity Recognition (NER) model performance by <b>76%</b> on scanned documents. </li>
 											<li>Designed and built end-to-end machine learning solution for ad personalization on Microsoft News that showed <b>8%</b> increase in ad revenue. </li>
-											<li>Designed and implemented CI/CD infrastructure for ML model deployment in a custom Spark Cluster. </li>
-											<li>Built a reusable MLOps template that expedite model training on Azure Machine Learning across different teams. </li>
+											<li>Designed and implemented CI/CD infrastructure for ML model deployment in a custom Spark Cluster, significantly reduces model deployment issues. </li>
+											<li>Built a reusable MLOps template that expedite can model training on Azure Machine Learning across different teams. </li>
 										</ul>
 									</div>
 								</div><!--//item-->
-								<div class="item mb-3">
+
+								<!-- <div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0"> Security Software Intern</h4>
 										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Akamai Technologies | May - Aug 2018 </div>
@@ -103,7 +119,7 @@
 											<li>Built a LSTM forecaster model to identify anomalies in network traffic.</li>
 										</ul>
 									</div>
-								</div><!--//item-->
+								</div>
 								<div class="item">
 									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Information System Intern</h4>
@@ -116,7 +132,7 @@
 											<li>Reduced Docker size by 25% and optimized Python algorithm by 20%.</li>
 										</ul>
 									</div>
-								</div><!--//item-->								
+								</div>-->
 							</section><!--//work-section-->
 
 							
@@ -146,22 +162,23 @@
 									<ul class="list-unstyled resume-skills-list">
 										<li class="mb-2">Python/C++/C#</li>
 										<li class="mb-2">Tensorflow/Pytorch</li>
-										<li class="mb-2">Unreal Engine</li>
 										<li class="mb-2">Cloud Infrastructure</li>
 										<li class="mb-2">Azure Machine Learning</li>
 										<li class="mb-2">Azure Cognitive Service</li>
 										<li class="mb-2">Spark/Azure Synapse</li>
 										<li class="mb-2">Kubernetes/Docker</li><br>
+										<li class="mb-2">Unreal Engine</li>
 									</ul>
 								</div><!--//item-->
 								<div class="item">
 									<h4 class="item-title">Expertise</h4>
 										<ul class="list-unstyled resume-skills-list">
 											<li class="mb-2">MLOps<li>
+											<li class="mb-2">Inference Optimization<li>
 											<li class="mb-2">Data Pipeline<li>
 											<li class="mb-2">Network Engineering</li>
-											<li class="mb-2">Reinforce Learning</li>
-											<li class="mb-2">Game Development</li>
+											<!-- <li class="mb-2">Reinforce Learning</li>
+											<li class="mb-2">Game Development</li> -->
 										</ul>
 									</div><!--//item-->
 							</section><!--//skills-section-->
