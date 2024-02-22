@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html lang="en"> 
+<style>
+	@media print {
+		.row {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		.resume-main, .resume-aside {
+			/* Prevents columns from stacking */
+			flex: 0 0 auto;
+			width: auto;
+		}
+		.resume-main {
+			/* Adjust width as needed */
+			width: 66.66667%; /* Bootstrap's .col-lg-8 equivalent */
+		}
+		.resume-aside {
+			/* Adjust width as needed */
+			width: 33.33333%; /* Bootstrap's .col-lg-4 equivalent */
+		}
+	}
+</style>
 <head>
 	<title>Jianjie Liu - Machine Learning Engineer</title>
 	
