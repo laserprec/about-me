@@ -24,21 +24,29 @@
 	<style>
 		@media print {
 			.row {
-				display: flex;
-				flex-wrap: nowrap;
-			}
-			.resume-main, .resume-aside {
-				/* Prevents columns from stacking */
-				flex: 0 0 auto;
-				width: auto;
+				display: flex !important;
+				flex-wrap: nowrap !important;
 			}
 			.resume-main {
-				/* Adjust width as needed */
-				width: 66.66667%; /* Bootstrap's .col-lg-8 equivalent */
+				width: 70% !important;
+				flex: 0 0 70% !important;
 			}
 			.resume-aside {
-				/* Adjust width as needed */
-				width: 33.33333%; /* Bootstrap's .col-lg-4 equivalent */
+				width: 30% !important;
+				flex: 0 0 30% !important;
+				border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+			}
+			/* Hide footer when printing */
+			footer {
+				display: none !important;
+			}
+			/* Ensure the page background is white */
+			body {
+				background-color: white !important;
+			}
+			.resume-wrapper {
+				box-shadow: none !important;
+				border: none !important;
 			}
 		}
 	</style>
@@ -69,15 +77,6 @@
 					
 				</div><!--//resume-header-->
 				<hr>
-				<div class="resume-intro py-3">
-					<div class="media flex-column flex-md-row align-items-center">
-						<img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="assets/images/resume-profile.png" alt="image">
-						<div class="media-body text-left">
-							<p class="mb-0"> As a Machine Learning Engineer, I've tackled diverse challenges in Natural Language Processing, Computer Vision, Reinforcement Learning and MLOps. I hold a deep enthusiasm for the capacity of machine learning to ethically influence the development of a more intelligent world, especially with the advent of generative models like Stable Diffusion and GPTs. Outside of work, I am an amateur photographer specializing in portraits and street photography. </p>
-						</div><!--//media-body-->
-					</div>
-				</div><!--//resume-intro-->
-				<hr>
 				<div class="resume-body">
 					<div class="row">
 						<div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
@@ -85,16 +84,17 @@
 								<h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Machine Learning Engineer</h4>
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Senior Machine Learning Engineer</h4>
 										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Akasa | February 2023 - Present</div>
-										
 									</div>
 									<div class="item-content">
-										<p> Optimizing model inference</p>
+										<p>Leading LLM infrastructure development and optimization</p>
 										<ul class="resume-list">
-											<li>Optimized the inference time of an in-house OCR model, achieving a 40% improvement.</li>
-											<li>Productionized an in-house 7-billion-parameter LLM and reduced inference cost by 78%.</li>
-											<li>Optimized the inference parameters of the LLM to lower the false positive rate by 21%.</li>
+											<li>Extended in-house LLM context window <b>from 32k to 180k</b> tokens using advanced distributed training.</li>
+											<li>Optimized LLM inference service achieving <b>6.7x</b> throughput improvement through system-level optimization.</li>
+											<li>Built production evaluation pipeline processing <b>millions</b> of tokens for in-house LLM deployment validation.</li>
+											<li>Created model artifact interface reducing deployment cycle from <b>months to days</b>.</li>
+											<li>Reduced OpenAI API costs by <b>35%</b> through prompt engineering optimization.</li>
 										</ul>
 									</div>
 								</div>
@@ -106,9 +106,9 @@
 									<div class="item-content">
 										<p>Building AI solutions for game development</p>
 										<ul class="resume-list">
-											<li>Revamped the MLOps pipeline for <a href="https://github.com/microsoft/recommenders">Microsoft Recommenders</a> decreasing runtime by <b>30%</b> and cost by <b>20%</b>.</li>
-											<li>Prototyped and built Azure infrastructures for distributed training of AI agents to navigate production game maps.</li>
-											<li>Built and extended communication framework between RL agents and game engine over gRPC, allowing RL agents to interact with any production game built on Unreal Engine.</li>
+											<li>Optimized MLOps pipeline for Microsoft Recommenders, reducing runtime by <b>30%</b> and cost by <b>20%</b>.</li>
+											<li>Built Azure infrastructure for distributed training of game navigation AI agents.</li>
+											<li>Developed gRPC framework enabling RL agents to interact with Unreal Engine games.</li>
 										</ul>
 									</div>
 								</div><!--//item-->
@@ -121,7 +121,7 @@
 									<div class="item-content">
 										<p>As a ML engineer in the <a href="https://www.microsoftnewengland.com/maidap/">Microsoft AI Development Acceleration Program (MAIDAP)</a>, I built AI solutions for different product domains, such as News, Cognitive Service, IoT, and Data Analytic Platforms. </p>
 										<ul class="resume-list">
-											<li>Developed an open-sourced tool,<a href="https://microsoft.github.io/genalog/"> genalog,</a> to generate synthetic documents that improved Named Entity Recognition (NER) model performance by <b>76%</b> on scanned documents. </li>
+											<li>Developed an open-sourced tool,<a href="https://microsoft.github.io/genalog/"> genalog,</a> to generate synthetic documents that improved Named Entity Recognition (NER) model performance by <b>76%</b> on scanned documents. <a href="https://arxiv.org/abs/2108.02899">Publication</a> </li>
 											<li>Designed and built an end-to-end machine learning solution for ad personalization on Microsoft News that showed <b>8%</b> increase in ad revenue. </li>
 											<li>Designed and implemented CI/CD infrastructure for ML model deployment in a custom Spark Cluster, a critical test framework for the in-database inference features in development. </li>
 											<li>Developed a reinforcement learning-based HVAC control system, establishing data pipelines for sensor data aggregation and online model inference.</li>
